@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    height: calc(100vh - 64px); /* Subtract height of toolbar */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 24px;
+  }
+  
+  .mat-drawer {
+    width: 200px;
+  }
+  
+  .mat-nav-list a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+  .mat-nav-list a:hover {
+    background-color: #eee;
+  }
+  
+  .mat-nav-list .active {
+    background-color: #eee;
+    font-weight: bold;
+  }
+  mat-toolbar{
+    color:black;
+  }
+ #icon{
+  padding-left: 1200px;
+ } 

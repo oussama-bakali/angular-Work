@@ -1,0 +1,29 @@
+
+<app-header></app-header>
+<h1>Books</h1>
+
+
+<div class="books" *ngFor="let element of books;index as i">
+<div  class="test" *ngIf="element.premium">
+    <img src={{element.imagelivre}} *ngIf="element.premium">
+    <span><mat-icon>lock</mat-icon></span>
+
+</div>
+<div class="test" *ngIf="!element.premium">
+    <form [formGroup]="registerform" (ngSubmit)="addbooknormal(element.reference)">
+        <img src={{element.imagelivre}}>
+
+        <input type="text" placeholder="donnervotre id" formControlName="id">
+        <button>Add Book</button>
+    </form>
+    
+    
+   
+</div>
+
+Reference:
+{{element.reference}}
+
+
+
+</div>

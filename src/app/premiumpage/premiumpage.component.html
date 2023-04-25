@@ -1,0 +1,12 @@
+<app-header></app-header>
+<h1>PremiumBooksPage</h1>
+<div class="books" *ngFor="let element of premiumbooks">
+    <form [formGroup]="registerform" (ngSubmit)="addpremiumbook(element.reference)">
+        
+
+        <input type="text" placeholder="donnervotre id" formControlName="id">
+   <img src={{element.imagelivre}}>    
+   {{element.reference}} 
+   <button mat-raised-button color="primary" >GetBook</button>     
+</form>
+    </div>

@@ -1,0 +1,33 @@
+.verify{
+    height: 250px;
+    width:350px;
+   
+    margin-left: 40%;
+    
+    
+}
+body{
+    background-image: url("../images/libraryimage.jpg");
+
+background-repeat: no-repeat;
+background-size: 100%;
+}
+.warning{
+    background-color: red;
+    height:100px;
+    width:100px;
+}
+.success{
+    background-color: green;
+    height:100px;
+    width:100px;
+}
+input[type="text"]{
+    margin-top: 40px;
+    width:300px;
+    
+}
+button{
+    margin-left: 40px;
+    width:200px;
+}

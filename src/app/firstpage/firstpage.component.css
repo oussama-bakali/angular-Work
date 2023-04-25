@@ -1,0 +1,85 @@
+body{
+    scroll-behavior: smooth;
+    height:100%;
+    
+    background-color: black;
+}
+ul{
+    display: flex;
+    border-bottom: 5px solid white;
+    
+}
+ul h1{
+    padding:10px;
+    color:white;
+   
+    
+}
+ul a{
+    padding:10px;
+    color:white;
+    text-decoration: none; 
+   font-size: 25px;
+}
+.test{
+    padding-top:10px;
+    padding-left:60px;
+    
+}
+ul :first-child{
+  
+    margin-right:900px;
+}
+.body p{
+    padding-top: 10px;
+    color: white;
+    
+}
+.body img{
+    padding-left:200px;
+    height:350px;
+    width:600px;
+}
+#ebook{
+  
+    color:white;
+    font-size: 75px;
+}
+.header{
+    margin-bottom: 50px;
+}
+.body{
+    display: flex;
+    padding-top: 50px;
+}
+#login{
+    height:40px;
+    background-color: orange;
+    width: 120px;
+    color:white
+}
+#register{
+    height:40px;
+    background-color: red;
+    width: 120px;
+    color: white;
+}
+.bookchoices{
+    background-color: black;
+}
+.bookchoices img{
+height:200px;
+width:200px;
+padding:10px;
+}
+.bookchoices h1{
+    align-items: center;
+    justify-content: center;
+    color:white;
+    margin-left:10%;
+}
+.support{
+    background-color: black;
+    display: list-item;
+    height:250px;
+}

@@ -1,0 +1,17 @@
+.books img{
+    height: 170px;
+    width: 200px;
+    
+    
+    padding: 10px;
+    
+}
+.books{
+    display: flex;
+    float: left;
+    
+}
+button{
+    height: 41px;
+    width: 100px;
+}

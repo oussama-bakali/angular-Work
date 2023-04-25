@@ -1,0 +1,41 @@
+<body>
+<div class="addbooks">
+
+<mat-card>
+<mat-card-content>
+<h1>add book</h1>
+<form [formGroup]="registerform"(ngSubmit)="addbook(registerform.value)">
+<h2>reference</h2>
+<input type="text" placeholder="referencelivre" formControlName="reference">
+<h2>auteur</h2>
+<input type="text" placeholder="auteur" formControlName="auteur">
+<h2>codeabar</h2>
+<input type="text" placeholder="codeabar" formControlName="codeabar">
+<h2>nbpages </h2>
+<input type="text" placeholder="nbpages" formControlName="nbpages">
+<h2>fichlivre</h2>
+<input type="file" placeholder="fichlivre" formControlName="fichlivre">
+<h2>imagelivre</h2>
+<input type="text" placeholder="imagelivre" formControlName="imagelivre">
+<h2>statut</h2>
+<input type="text" placeholder="statuslivre" formControlName="premium">
+<button mat-raised-button >AddBook</button>
+</form>
+</mat-card-content>
+</mat-card>
+
+</div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</body>

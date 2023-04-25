@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Dashboard</span>
+  <span id="icon"><button mat-icon-button ></button> </span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+     logout
+    </button>
+    
+  </mat-menu>
+  
+</mat-toolbar>
+
+<mat-drawer-container class="container">
+  <mat-drawer #drawer mode="side" [opened]="true">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin" routerLinkActive="active">Dashboard <mat-icon>home</mat-icon></a>
+      <a mat-list-item routerLink="/etudiants" routerLinkActive="active">Liste d etudiants <mat-icon>accessibility_new</mat-icon></a>
+      
+      <a mat-list-item routerLink="/books"routerLinkActive="active">Liste de livres<mat-icon>book</mat-icon></a>
+      <a mat-list-item routerLink="/cles" routerLinkActive="active"> clés disponnibles<mat-icon>vpn_key</mat-icon></a>
+        
+      <a mat-list-item routerLink="/admindetails" routerLinkActive="active">Confidentialité <mat-icon>settings</mat-icon></a>
+    </mat-nav-list>
+  </mat-drawer>
+  
+    <div class="content">
+        <table>
+<th>cles</th>
+<tr *ngFor="let cle of keys;let i = index">
+    <td> {{keys}}{{i}}</td>
+</tr>
+        </table>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>

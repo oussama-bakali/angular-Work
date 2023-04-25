@@ -1,0 +1,17 @@
+<app-header></app-header>
+<body>
+
+    <div class="verify">
+
+        <form [formGroup]="form" (ngSubmit)="verifycle()">
+            <input type="text" placeholder="entrercle" formControlName="cle"> 
+            
+            <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit" >Verifier</button>
+            
+            </form>
+    <div class="success" *ngIf="succss&&!error">{{success}}</div>
+    <div class="warning" *ngIf="error&&!succss">{{message}}</div>
+    
+    </div>
+</body>
+

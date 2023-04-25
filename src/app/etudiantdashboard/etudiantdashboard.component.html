@@ -1,0 +1,18 @@
+<app-header></app-header>
+<body>
+<div class="test">
+<h1>nom</h1>{{informationsetudiant.nom}}
+<h1>prenom</h1>{{informationsetudiant.prenom}}
+<h1>livres achetés</h1>
+<div class="books" *ngFor="let element of informationsetudiant.livres">
+    <img src={{element.imagelivre}}>
+ <span>reference </span>  <br> {{element.reference}}
+  <span>nbpages</span>  {{element.nbpages}} 
+</div>
+</div> 
+
+
+ 
+
+
+</body>

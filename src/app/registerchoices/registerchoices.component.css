@@ -1,0 +1,11 @@
+.registerchoices{
+    display: block;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+}
+body{
+    background-color: black;
+}

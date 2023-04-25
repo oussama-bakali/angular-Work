@@ -1,0 +1,13 @@
+.books img{
+    height: 170px;
+    width: 200px;
+    
+    
+    padding: 10px;
+    
+}
+.books{
+    display: flex;
+    float: left;
+    
+}

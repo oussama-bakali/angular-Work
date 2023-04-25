@@ -1,0 +1,30 @@
+<body>
+
+
+    <mat-card class="registercard">
+    <mat-card-header>SignIn</mat-card-header>
+    
+    
+    <form [formGroup]="loginform" (ngSubmit)="loginetudiant()">
+        <h1><br></h1>
+        <input type="text" placeholder="idetudiant" formControlName="idutilisateur" name="id" >
+    <h1><br></h1>
+    <input type="password" placeholder="passwordetudiant" name="password" formControlName="password"><br>
+    <button type="submit" >login</button><br>
+    <a routerLink="/registeretudiant">don't have an account? Register now </a>
+    <h1>waiting for login</h1>
+    <div *ngIf="!success" class="successlogin">
+        
+        <mat-progress-spinner
+        class="example-margin"
+        color="white"
+        [mode]="'indeterminate'"
+        [value]="50">
+    </mat-progress-spinner>
+    </div>
+    
+    </form>
+    
+    </mat-card>
+    
+    </body>

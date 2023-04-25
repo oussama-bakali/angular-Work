@@ -1,0 +1,80 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Dashboard</span>
+    <span id="icon"><button mat-icon-button ></button> </span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="disconnect()">
+        <mat-icon>dialpad</mat-icon>
+       logout
+      </button>
+      
+    </mat-menu>
+    
+  </mat-toolbar>
+  
+  <mat-drawer-container class="container">
+    <mat-drawer #drawer mode="side" [opened]="true">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/admin" routerLinkActive="active">Dashboard <mat-icon>home</mat-icon></a>
+        <a mat-list-item routerLink="/etudiants" routerLinkActive="active">Liste d etudiants <mat-icon>accessibility_new</mat-icon></a>
+        
+        <a mat-list-item routerLink="/books" routerLinkActive="active">Liste de livres<mat-icon>book</mat-icon></a>
+        <a mat-list-item routerLink="/cles" routerLinkActive="active"> clés disponnibles<mat-icon>vpn_key</mat-icon></a>
+          
+        <a mat-list-item routerLink="/admindetails" routerLinkActive="active">Confidentialité <mat-icon>settings</mat-icon></a>
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="content">
+        <div>
+            <h1> Liste d etudiants</h1>
+           
+             <a href="http://localhost:8050/admin/export/pdf"><mat-icon>description</mat-icon></a>
+            <h2>filtrer</h2> 
+            <select #select (change)="getetudiantsbyrole(select.value)">
+              <option value="REGISTRED">REGISTRED</option>
+              <option value="SUSPENDU">  SUSPENDU</option>
+              <option value="NONACTIVATED">NONACTIVATED</option>
+              <option value="PREMIUM">PREMIUM</option>
+              
+          </select>
+<table> 
+    <tr>
+      <th>id</th>
+<th>nom</th>
+<th>prenom</th>
+<th>Role</th>
+
+<th>Roles disponibles</th>
+<th> changer role</th>
+
+    </tr>
+    <tr *ngFor="let elem of etudiants">
+
+      <td> {{elem.idutilisateur}}</td>
+<td> {{elem.nom}}</td>
+<td> {{elem.prenom}}</td>
+<td>{{elem.role}} </td>
+
+<td> <select #select>
+    <option value="REGISTRED">REGISTRED</option>
+    <option value="SUSPENDU">  SUSPENDU</option>
+    <option value="NONACTIVATED">NONACTIVATED</option>
+    
+</select></td>
+<td><button mat-button color="primary" (click)="modifyrole(elem.idutilisateur,select.value)">Modify role</button> </td>
+
+    </tr>
+</table>
+
+
+        </div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+  

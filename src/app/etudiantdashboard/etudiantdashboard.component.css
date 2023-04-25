@@ -1,0 +1,26 @@
+mat-card{
+    height:700px;
+    width:600px;
+    
+}
+.books img{
+    height: 170px;
+    width: 200px;
+    
+    
+    padding: 10px;
+    
+}
+.books{
+    display: flex;
+    float: left;
+    
+}
+body{
+    
+
+background-size: 100%;
+}
+h1{
+    color:yellow
+}

@@ -1,0 +1,16 @@
+.addbooks{
+    width:400px;
+    height:700px;
+    
+}
+mat-card{
+    margin-left: 300px;
+    width:500px;
+    height:600px;
+    
+}
+body{
+    background-image: url("../images/library.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

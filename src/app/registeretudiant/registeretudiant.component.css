@@ -1,0 +1,67 @@
+body{
+
+    background-image: url("../images/libraryimage.jpg");
+    background-size: 100%;
+    
+    background-repeat: no-repeat;
+
+}
+.registercard{
+    max-width: 400px;
+    background-color: black;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    
+}
+h1{
+    color: gray;
+    font-size: 11px;
+}
+h1{
+    padding-top: 10px;
+}
+::placeholder{
+    color: whitesmoke;
+}
+input{
+    background-color: transparent;
+    width: 350px;
+    color: white;
+    margin-left: 15px;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+input:focus{
+    outline: none;
+    -webkit-box-shadow:none;
+    box-shadow:none
+}
+mat-card-header{
+    color: whitesmoke;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:80px;
+    
+}
+button{
+    width: 120px;
+    margin-top: 30px;
+    color: whitesmoke;
+    height:40px;
+    background-color: orange;
+    margin-left: 15px;
+    margin-bottom:10px;
+}
+a{
+    
+    text-decoration: none;
+    color: white;
+}
+li{
+    color: white;
+
+}

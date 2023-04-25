@@ -1,0 +1,23 @@
+<app-header></app-header> 
+<body>
+
+<div class="activateabonnement">
+
+    <form [formGroup]="form" (ngSubmit)="activateabonnement(form)">
+        <input type="text" formControlName="id" placeholder="entrer votre id" >
+        <input type="text" formControlName="cle" placeholder="entrer votre cle">
+        <button type="submit" [disabled]="form.invalid"><mat-icon>redeem</mat-icon></button> 
+        <div *ngIf="message&&!erreur" class="activated">
+            <mat-icon>done_outline</mat-icon>
+            {{message}}
+        </div>
+        <div *ngIf="erreur&&!message" class="fail">
+            {{erreur}}
+        </div>
+        
+    </form>
+</div>
+
+
+</body>
+
